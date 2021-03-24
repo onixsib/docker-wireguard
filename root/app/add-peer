@@ -34,7 +34,7 @@ DUDE"
     cat <<DUDE >> /config/wg0.conf
 [Peer]
 PublicKey = $(cat /config/peer${i}/publickey-peer${i})
-AllowedIPs = ${INTERFACE}.$(( $i + 1 ))/32
+AllowedIPs = ${INTERFACE}.$(( $i + 1 ))/32, ${ALLOWEDIPS}
 
 DUDE
     echo "PEER ${i} QR code:"
